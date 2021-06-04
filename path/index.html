@@ -11,11 +11,11 @@
 <body>
   <h1>Hello World!</h1>
   <p id="param"><b>Query Params: </b></p>
-  <!-- <p id="os"><b>OS:</b> </p>
+  <p id="os"><b>OS:</b> </p>
   <p id="language"><b>Language:</b> </p>
   <p id="version"><b>Version:</b> </p>
   <p id="isInClient"><b>isInClient:</b> </p>
-  <p id="accessToken"><b>AccessToken:</b> </p> -->
+  <p id="accessToken"><b>AccessToken:</b> </p>
   <img id="pictureUrl">
   <p id="userId"><b>userId:</b> </p>
   <p id="displayName"><b>displayName:</b> </p>
@@ -46,29 +46,6 @@
   </script>
 
   <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
-
-  <!-- <script>
-    async function getUserProfile() {
-      const profile = await liff.getProfile()
-      // document.getElementById("pictureUrl").src = profile.pictureUrl
-      document.getElementById("userId").append(profile.userId)
-      // document.getElementById("statusMessage").append(profile.statusMessage)
-      // document.getElementById("displayName").append(profile.displayName)
-      // document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
-    }
-
-    async function main() {
-      alert("LINE Developers x Skooldio")
-      await liff.init({ liffId: "1656055188-l1PEg898" })
-      // document.getElementById("isLoggedIn").append(liff.isLoggedIn())
-      if (liff.isLoggedIn()) {
-        getUserProfile()
-      } else {
-        liff.login({redirectUri: "https://poppybsr.github.io/liff/path"})
-      }
-    }
-  </script> -->
-  <!-- <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script> -->
   <script>
     function createUniversalLink() {
       const link1 = liff.permanentLink.createUrl()
