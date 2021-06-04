@@ -37,13 +37,22 @@
 
     async function main() {
       // alert("LINE Developers x Skooldio")
+      // await liff.init({ liffId: "1656055188-l1PEg898" })
+      // // document.getElementById("isLoggedIn").append(liff.isLoggedIn())
+      // if (liff.isLoggedIn()) {
+      //   getUserProfile()
+      // } else {
+      //   liff.login({redirectUri: "https://poppybsr.github.io/liff/path"})
+      // }
+      liff.ready.then(() => {
+        document.getElementById("isLoggedIn").append(liff.isLoggedIn())
+        if (liff.isLoggedIn()) {
+          getUserProfile()
+        } else {
+          liff.login({redirectUri: "https://poppybsr.github.io/liff/path"})
+        }
+      })
       await liff.init({ liffId: "1656055188-l1PEg898" })
-      // document.getElementById("isLoggedIn").append(liff.isLoggedIn())
-      if (liff.isLoggedIn()) {
-        getUserProfile()
-      } else {
-        liff.login({redirectUri: "https://poppybsr.github.io/liff/path"})
-      }
     }
   </script>
 </body>
